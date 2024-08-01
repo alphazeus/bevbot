@@ -46,4 +46,4 @@ ros2 run imu_pkg imu_angle
 This should start the ros2 topic publishing the IMU data on `/imu_angle`
 
 ## References
-mpu6050 : (https://github.com/OmidAlekasir/mpu6050)
+[MPU6050 DMP Library](https://github.com/OmidAlekasir/mpu6050)
