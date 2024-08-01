@@ -41,6 +41,6 @@ source install/setup.sh
 ```
 Finally run the node
 ```
-ros2 run imu_node imu_angle
+ros2 run imu_pkg imu_angle
 ```
 This should start the ros2 topic publishing the IMU data on `/imu_angle`
