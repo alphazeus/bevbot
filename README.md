@@ -1,4 +1,4 @@
-# bevbot
+# BEVBot
 BEVBot codebase is for the complete control of the robot with its embedded hardware including
 - [ ] Lidar (Livox MID360)
 - [ ] Camera (OAK-D Lite)
