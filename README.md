@@ -1,4 +1,4 @@
-#BEVBot
+# BEVBot
 BEVBot codebase is for the complete control of the robot with its embedded hardware including
 - [ ] Lidar (Livox MID360)
 - [ ] Camera (OAK-D Lite)
@@ -9,7 +9,7 @@ Whole code is based on the Nvidia Jetson TX2 and ROS2 humble platform. The ROS2 
 ##Running the project:
 It will be quite hard to get everything running first time. The breakdown of testing each component is mentioned below and at the end about running everything together.
 
-###ROS2 Nodes
+### ROS2 Nodes
 #### IMU
 IMU node is based on the MPU6050 hardware.
 Dependencies:
@@ -45,5 +45,5 @@ ros2 run imu_pkg imu_angle
 ```
 This should start the ros2 topic publishing the IMU data on `/imu_angle`
 
-##References
+## References
 mpu6050 : (https://github.com/OmidAlekasir/mpu6050)
