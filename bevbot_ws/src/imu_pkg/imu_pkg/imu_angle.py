@@ -44,7 +44,7 @@ class IMUPublisher(Node):
             msg.data = now.strftime("Timestamp: %m/%d/%Y, %H:%M:%S.%f")
             msg.data += '\nAngles: %f, %f, %f' % (roll_pitch_yaw.x, roll_pitch_yaw.y, roll_pitch_yaw.z)
             self.publisher_.publish(msg)
-            self.get_logger().info('Publishing: "%s"' % msg.data)
+            #self.get_logger().info('Publishing: "%s"' % msg.data)
 
 
 def main(args=None):
