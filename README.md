@@ -1,6 +1,6 @@
 # BEVBot
 BEVBot codebase is for the complete control of the robot with its embedded hardware including
-- [ ] Lidar (Livox MID360)
+- [X] Lidar (Livox MID360)
 - [ ] Camera (OAK-D Lite)
 - [X] IMU (MPU 6050)
 
