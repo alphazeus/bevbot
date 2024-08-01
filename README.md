@@ -10,6 +10,18 @@ Whole code is based on the Nvidia Jetson TX2 and ROS2 humble platform. The ROS2 
 It will be quite hard to get everything running first time. The breakdown of testing each component is mentioned below and at the end about running everything together.
 
 ### ROS2 Nodes
+#### Lidar
+The code for lidar is based on the Livox MID 360. As an initial setup, follow the instructions mentioned in the [Livox github](https://github.com/Livox-SDK/livox_ros_driver2).
+Navigate to the `<BEVBot folder>/bevbot_ws` Test your code by running the following launch file:
+```
+ros2 launch launch/lidar_plc2_launch.py
+```
+To test the code, on a new terminal, run
+```
+ros2 topic list
+```
+You should be able to see two topics `/livox/imu` and  `/livox/lidar`
+
 #### IMU
 IMU node is based on the MPU6050 hardware.
 Dependencies:
@@ -31,7 +43,7 @@ If you have a specific version of python running, like python3.10, use
 python3.10 -m pip install mpu6050
 ```
 
-Navigate to <bevbot_folder> and run
+Navigate to `<bevbot_folder>/bevbot_ws` and run
 ```
 colcon build
 ```
@@ -47,3 +59,4 @@ This should start the ros2 topic publishing the IMU data on `/imu_angle`
 
 ## References
 [MPU6050 DMP Library](https://github.com/OmidAlekasir/mpu6050)
+[Livox ROS2 Driver](https://github.com/Livox-SDK/livox_ros_driver2)
