@@ -1,7 +1,7 @@
 # BEVBot
 BEVBot codebase is for the complete control of the robot with its embedded hardware including
 - [X] Lidar (Livox MID360)
-- [ ] Camera (OAK-D Lite)
+- [X] Camera (OAK-D Lite)
 - [X] IMU (MPU 6050)
 
 Whole code is based on the Nvidia Jetson TX2 and ROS2 humble platform. The ROS2 workspace is created in such a way that you can remove any folder from src and run each hardware independently if needed.
@@ -11,7 +11,11 @@ It will be quite hard to get everything running first time. The breakdown of tes
 
 ### ROS2 Nodes
 #### Lidar
-The code for lidar is based on the Livox MID 360. As an initial setup, follow the instructions mentioned in the [Livox github](https://github.com/Livox-SDK/livox_ros_driver2).
+The code for lidar is based on the Livox MID 360. 
+Dependencies:
+- (Livox-SDK)[https://github.com/Livox-SDK/livox_ros_driver2]
+
+As an initial setup, follow the instructions mentioned in the [Livox github](https://github.com/Livox-SDK/livox_ros_driver2).
 Navigate to the `<BEVBot folder>/bevbot_ws` Test your code by running the following launch file:
 ```
 ros2 launch launch/lidar_plc2_launch.py
@@ -21,6 +25,21 @@ To test the code, on a new terminal, run
 ros2 topic list
 ```
 You should be able to see two topics `/livox/imu` and  `/livox/lidar`
+
+#### Camera
+Camera is based on the OAK-D lite cameras. 
+Dependencies:
+- (oakd-ros2-multicam)[https://github.com/alphazeus/oakd_ros2_mutlicam]
+
+Navigate to this library and follow the instructions in the readme. Once the dependencies are installed, navigate to `<bevbot folder>/bevbot_ws/src/cam_pkg/cam_pkg/`. Then run the following command
+```
+python3 depthai_ros2_multicam_multithread.py
+```
+In a new terminal, enter the command
+```
+ros2 topic list
+```
+you should be able to see the list of camera topics in the output.
 
 #### IMU
 IMU node is based on the MPU6050 hardware.
