@@ -47,7 +47,13 @@ def generate_launch_description():
             package='imu_pkg',
             namespace='imu',
             executable='imu_angle',
-            name='data'
+            name='imu_data'
+        ),
+        Node(
+            package='cam_pkg',
+            namespace='cam',
+            executable='cam_node',
+            name='cam_data'
         )
     ])
 
