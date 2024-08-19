@@ -34,7 +34,7 @@ def createPipeline():
     # Define a source - color camera
     camRgb = pipeline.create(dai.node.ColorCamera)
 
-    camRgb.setPreviewSize(300, 300)
+    camRgb.setPreviewSize(640, 480)
     camRgb.setBoardSocket(dai.CameraBoardSocket.CAM_A)
     camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)
     camRgb.setInterleaved(False)
